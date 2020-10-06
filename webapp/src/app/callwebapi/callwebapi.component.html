@@ -1,1 +1,16 @@
 <p>callwebapi works!</p>
+
+<div>
+    <ul class="list-group">
+        <li *ngFor="let item of weatherList" class="list-group-item">
+            <h5>Summary: {{item.summary}}</h5>
+            <small class="text-muted">
+                <ul>
+                    <li><strong>Date:</strong> {{item.date}}</li>
+                    <li><strong>Temp C:</strong> {{item.temperatureC}}</li>
+                    <li><strong>Temp F:</strong> {{item.temperatureF}}</li>
+                </ul>
+            </small>
+        </li>
+    </ul>
+</div>
