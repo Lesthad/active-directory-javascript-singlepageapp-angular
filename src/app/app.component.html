@@ -3,6 +3,7 @@
 
   <div class="toolbar-spacer"></div>
 
+  <a mat-button [routerLink]="['callwebapi']">Call Web API</a>
   <a mat-button [routerLink]="['profile']">Profile</a>
 
   <button mat-raised-button *ngIf="!loggedIn" (click)="login()">Login</button>

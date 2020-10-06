@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HomeComponent } from './home/home.component';
+import { CallwebapiComponent } from './callwebapi/callwebapi.component';
 
 const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigator.userAgent.indexOf('Trident/') > -1;
 
@@ -20,7 +21,8 @@ const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigato
   declarations: [
     AppComponent,
     ProfileComponent,
-    HomeComponent
+    HomeComponent,
+    CallwebapiComponent
   ],
   imports: [
     BrowserModule,
@@ -33,9 +35,9 @@ const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigato
     AppRoutingModule,
     MsalModule.forRoot({
       auth: {
-        clientId: 'Enter_the_Application_Id_Here',
-        authority: 'Enter_the_Cloud_Instance_Id_HereEnter_the_Tenant_Info_Here',
-        redirectUri: 'Enter_the_Redirect_Uri_Here',
+        clientId: '03316700-95f2-48dc-ba90-c5a0fadfbd75',
+        authority: 'https://login.microsoftonline.com/6f530819-f1e4-45b6-96e4-a9d1edd23b66',
+        redirectUri: 'http://localhost:4200/',
       },
       cache: {
         cacheLocation: 'localStorage',
@@ -51,7 +53,7 @@ const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigato
       ],
       unprotectedResources: [],
       protectedResourceMap: [
-        ['Enter_the_Graph_Endpoint_Herev1.0/me', ['user.read']]
+        ['https://graph.microsoft.com/v1.0/me', ['user.read']]
       ],
       extraQueryParameters: {}
     })
